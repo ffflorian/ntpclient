@@ -25,7 +25,7 @@
     "url": "git+https://github.com/ffflorian/ntpclient.git"
   },
   "scripts": {
-    "clear": "rimraf dist",
+    "clear": "rimraf dist/",
     "dist": "yarn prettier && yarn clear && tsc",
     "prettier": "prettier --single-quote --write \"src/**/*.ts\" \"spec/**/*.js\" \"bin/**/*\"",
     "test": "yarn dist && jasmine"

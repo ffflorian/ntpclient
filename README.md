@@ -1,19 +1,17 @@
-# NTPClient [![Build Status](https://travis-ci.org/ffflorian/ntpclient.svg?branch=master)](http://travis-ci.org/ffflorian/ntpclient)
+# NTPClient [![Build Status](https://travis-ci.org/ffflorian/ntpclient.svg)](http://travis-ci.org/ffflorian/ntpclient) [![Greenkeeper badge](https://badges.greenkeeper.io/ffflorian/ntpclient.svg)](https://greenkeeper.io/) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/ffflorian/ntpclient.svg)](https://greenkeeper.io/)
+TypeScript implementation of the NTP Client Protocol. Based on [node-ntp-client](https://github.com/moonpyk/node-ntp-client).
 
-Pure TypeScript implementation of the NTP Client Protocol. Based on [node-ntp-client](https://github.com/moonpyk/node-ntp-client).
-
-## Getting Started
-Install the module with: `npm install ntpclient`
+## Usage
+Add the module to your project with `yarn add ntpclient`.
 
 ```ts
 import NTPClient from 'ntpclient';
 
-NTPClient.getNetworkTime('pool.ntp.org', 123)
-  .then(date => console.log(date)}) // Tue Aug 01 2017 20:27:26 GMT+0200)
-  .catch(err => console.log(err));
-});
+new NTPClient() // you could also specify a custom server or port here.
+  .getNetworkTime()
+  .then(date => console.log(date)) // 2017-09-20T15:29:09.443Z
+  .catch(err => console.error(err));
 ```
 
 ## Contributors
