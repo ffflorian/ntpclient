@@ -28,7 +28,8 @@
     "clear": "rimraf dist/",
     "dist": "yarn prettier && yarn clear && tsc",
     "prettier": "prettier --single-quote --write \"src/**/*.ts\" \"spec/**/*.js\" \"bin/**/*\"",
-    "test": "yarn dist && jasmine"
+    "test": "yarn dist && jasmine",
+    "version": "yarn dist"
   },
   "types": "./dist/commonjs/index.d.ts",
   "version": "0.5.7"
