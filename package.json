@@ -4,7 +4,6 @@
   "dependencies": {
     "@types/node": "9.4.1",
     "commander": "2.14.1"
-    "commander": "2.11.0"
   },
   "devDependencies": {
     "jasmine": "3.0.0",
@@ -15,11 +14,11 @@
   },
   "description": "TypeScript implementation of the NTP Client Protocol.",
   "files": [
-    "dist/",
-    "bin/"
+    "dist",
+    "bin"
   ],
   "license": "MIT",
-  "main": "dist/commonjs/index.js",
+  "main": "dist/index.js",
   "name": "ntpclient",
   "repository": {
     "type": "git",
@@ -32,6 +31,6 @@
     "test": "yarn dist && jasmine",
     "version": "yarn dist"
   },
-  "types": "./dist/commonjs/index.d.ts",
+  "types": "./dist/index.d.ts",
   "version": "0.5.7"
 }
