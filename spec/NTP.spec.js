@@ -1,4 +1,4 @@
-const { default: NTP } = require('../dist/commonjs');
+const { default: NTP } = require('../');
 
 describe('NTP', () => {
   it('displays the current time', done => {
