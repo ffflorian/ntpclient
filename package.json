@@ -2,7 +2,7 @@
   "author": "Florian Keller <github@floriankeller.de>",
   "bin": "bin/ntpclient",
   "dependencies": {
-    "@types/node": "9.4.6",
+    "@types/node": "9.4.7",
     "commander": "2.14.1"
   },
   "devDependencies": {
