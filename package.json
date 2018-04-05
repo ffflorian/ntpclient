@@ -3,7 +3,7 @@
   "bin": "bin/ntpclient",
   "dependencies": {
     "@types/node": "9.6.2",
-    "commander": "2.15.0"
+    "commander": "2.15.1"
   },
   "devDependencies": {
     "jasmine": "3.1.0",
