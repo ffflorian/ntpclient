@@ -1095,16 +1095,16 @@ isobject@^3.0.0, isobject@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
 
-jasmine-core@~3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-3.1.0.tgz#a4785e135d5df65024dfc9224953df585bd2766c"
+jasmine-core@~3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-3.2.0.tgz#e33657dd6bb7f3d8e05b55b63ead841218146374"
 
-jasmine@3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/jasmine/-/jasmine-3.1.0.tgz#2bd59fd7ec6ec0e8acb64e09f45a68ed2ad1952a"
+jasmine@3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/jasmine/-/jasmine-3.2.0.tgz#b3a018454781805650e46578803d08e7cfdd7b3d"
   dependencies:
     glob "^7.0.6"
-    jasmine-core "~3.1.0"
+    jasmine-core "~3.2.0"
 
 json-parse-better-errors@^1.0.2:
   version "1.0.2"
