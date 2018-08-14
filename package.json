@@ -1,10 +1,13 @@
 {
   "author": "Florian Keller <github@floriankeller.de>",
-  "bin": "bin/ntpclient",
+  "bin": {
+    "ntpclient": "bin/ntpclient"
+  },
   "dependencies": {
     "@types/node": "10.5.8",
     "commander": "2.17.1"
   },
+  "description": "TypeScript implementation of the NTP Client Protocol.",
   "devDependencies": {
     "jasmine": "3.2.0",
     "prettier": "1.14.2",
@@ -12,7 +15,6 @@
     "typescript": "3.0.1",
     "webpack": "4.16.5"
   },
-  "description": "TypeScript implementation of the NTP Client Protocol.",
   "files": [
     "dist",
     "bin"
@@ -20,17 +22,15 @@
   "license": "MIT",
   "main": "dist/index.js",
   "name": "ntpclient",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ffflorian/ntpclient.git"
-  },
+  "repository": "https://github.com/ffflorian/ntpclient.git",
   "scripts": {
+    "build": "tsc",
     "clear": "rimraf dist/",
-    "dist": "yarn prettier && yarn clear && tsc",
+    "dist": "yarn clear && yarn build",
     "prettier": "prettier --write \"src/**/*.ts\" \"spec/**/*.js\" \"bin/**/*\"",
     "test": "yarn dist && jasmine",
     "version": "yarn dist"
   },
-  "types": "./dist/index.d.ts",
+  "types": "dist/index.d.ts",
   "version": "0.6.2"
 }

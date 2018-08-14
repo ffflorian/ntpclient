@@ -1,4 +1,4 @@
-# NTPClient [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&identifier=99027766)](https://dependabot.com)
+# NTPClient [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=ffflorian/ntpclient)](https://dependabot.com)
 
 TypeScript implementation of the NTP Client Protocol. Based on [node-ntp-client](https://github.com/moonpyk/node-ntp-client).
 

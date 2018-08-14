@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
-const { default: NTPClient } = require('../dist/commonjs/');
+//@ts-check
+
+const { NTPClient } = require('../dist/');
 const program = require('commander');
 const { description, version } = require('../package.json');
 

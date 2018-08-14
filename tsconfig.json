@@ -3,19 +3,18 @@
     "declaration": true,
     "lib": [
       "dom",
-      "es6"
+      "es2018"
     ],
-    "module": "CommonJS",
+    "module": "commonjs",
     "moduleResolution": "node",
     "noEmitOnError": true,
-    "noImplicitAny": true,
     "noImplicitReturns": true,
+    "noUnusedLocals": false,
     "outDir": "dist",
-    "removeComments": true,
     "rootDir": "src",
-    "sourceMap": false,
+    "sourceMap": true,
     "strict": true,
-    "target": "ES6"
+    "target": "es6"
   },
   "exclude": [
     "dist",
