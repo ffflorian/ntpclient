@@ -18,9 +18,13 @@ const defaultConfig: Required<NTPConfig> = {
 export class NTPClient {
   private config: Required<NTPConfig>;
 
-  constructor(server?: string);
+  constructor(server?: string, port?: number, timeout?: number);
   constructor(config?: NTPConfig);
-  constructor(configOrServer?: string | NTPConfig) {
+  constructor(
+    configOrServer?: string | NTPConfig,
+    port?: number,
+    replyTimeout?: number
+  ) {
     this.config = defaultConfig;
 
     if (typeof configOrServer === 'string') {
@@ -30,6 +34,12 @@ export class NTPClient {
         ...this.config,
         ...configOrServer
       };
+    }
+    if (port) {
+      this.config.port = port;
+    }
+    if (replyTimeout) {
+      this.config.replyTimeout = replyTimeout;
     }
   }
 

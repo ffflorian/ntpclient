@@ -26,7 +26,7 @@ new NTPClient({
 
 // or
 
-new NTPClient('de.pool.ntp.org')
+new NTPClient('de.pool.ntp.org', 123, 40 * 1000)
   .getNetworkTime()
   .then(date => console.log(date)) // 2017-09-20T15:29:09.443Z
   .catch(err => console.error(err));
