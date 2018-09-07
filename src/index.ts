@@ -86,7 +86,8 @@ export class NTPClient {
             fractpart = 256 * fractpart + msg[offsetTransmitTime + i];
           }
 
-          const milliseconds = intpart * 1000 + (fractpart * 1000) / 0x100000000;
+          const milliseconds =
+            intpart * 1000 + (fractpart * 1000) / 0x100000000;
 
           // **UTC** time
           const date = new Date('Jan 01 1900 GMT');
