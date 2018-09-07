@@ -1,6 +1,6 @@
 //@ts-check
 
-const { NTPClient } = require('../');
+const {default: NTPClient} = require('../');
 
 const replyTimeout = 10 * 1000;
 

@@ -15,7 +15,7 @@ const defaultConfig: Required<NTPConfig> = {
   server: 'pool.ntp.org'
 };
 
-export class NTPClient {
+export default class NTPClient {
   private readonly config: Required<NTPConfig>;
 
   constructor(server?: string, port?: number, timeout?: number);

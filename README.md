@@ -6,7 +6,7 @@ TypeScript implementation of the NTP Client Protocol. Based on [node-ntp-client]
 Add the module to your project with `yarn add ntpclient`.
 
 ```ts
-import {NTPClient} from 'ntpclient';
+import NTPClient from 'ntpclient';
 
 new NTPClient()
   .getNetworkTime()
