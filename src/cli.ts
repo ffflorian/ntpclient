@@ -9,8 +9,8 @@ program
   .version(version)
   .description(description)
   .option('-s, --server <host>', 'Specify a custom NTP server')
-  .option('-t, --timeout <number>', 'Specify the timeout in milliseconds')
   .option('-p, --port <number>', 'Specify a custom NTP port')
+  .option('-t, --timeout <number>', 'Specify the timeout in milliseconds')
   .parse(process.argv);
 
 new NTPClient({
