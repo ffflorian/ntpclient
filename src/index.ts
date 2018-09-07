@@ -60,7 +60,8 @@ export class NTPClient {
 
       const timeout = setTimeout(() => {
         client.close();
-        reject('Timeout waiting for NTP response.');
+        reject(new Error('Timeout waiting for NTP response.'));
+        errorFired = true;
       }, this.config.replyTimeout);
 
       /*

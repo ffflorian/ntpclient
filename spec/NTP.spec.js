@@ -2,31 +2,41 @@
 
 const { NTPClient } = require('../');
 
+const replyTimeout = 10 * 1000;
+
 describe('NTP', () => {
   it(
     'displays the current time',
     async () => {
-      const data = await new NTPClient().getNetworkTime();
+      const data = await new NTPClient({
+        replyTimeout
+      }).getNetworkTime();
       expect(data).toEqual(jasmine.any(Date));
     },
-    10000
+    replyTimeout
   );
 
   it(
     'works with another NTP server',
     async () => {
-      const data = await new NTPClient('de.pool.ntp.org').getNetworkTime();
+      const data = await new NTPClient({
+        replyTimeout,
+        server: 'de.pool.ntp.org'
+      }).getNetworkTime();
       expect(data).toEqual(jasmine.any(Date));
     },
-    10000
+    replyTimeout
   );
 
-  it(`won't work with an invalid NTP server`, async () => {
+  it(`doesn't work with an invalid NTP server`, async () => {
     try {
-      await new NTPClient('google.com').getNetworkTime(2000);
+      await new NTPClient({
+        replyTimeout: 1000,
+        server: 'google.com'
+      }).getNetworkTime();
       fail();
     } catch (error) {
-      expect(error).toContain('Timeout');
+      expect(error.message).toContain('Timeout');
     }
   });
 });
