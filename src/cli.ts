@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import { NTPClient } from './';
 import * as program from 'commander';
+import { NTPClient } from './';
 
 const { description, version } = require('../package.json');
 

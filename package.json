@@ -12,6 +12,9 @@
     "jasmine": "3.2.0",
     "prettier": "1.14.2",
     "rimraf": "2.6.2",
+    "tslint": "5.11.0",
+    "tslint-config-prettier": "1.15.0",
+    "tslint-plugin-prettier": "1.3.0",
     "typescript": "3.0.3",
     "webpack": "4.17.1"
   },
@@ -26,7 +29,8 @@
     "build": "tsc",
     "clear": "rimraf dist",
     "dist": "yarn clear && yarn build",
-    "prettier": "prettier --write \"src/**/*.ts\" \"spec/**/*.js\"",
+    "lint": "tslint -p tsconfig.json --fix",
+    "prettier": "prettier --ignore-path .gitignore --write \"**/*.{ts,js}\"",
     "test": "yarn dist && jasmine",
     "version": "yarn dist"
   },

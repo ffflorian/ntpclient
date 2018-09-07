@@ -16,7 +16,7 @@ const defaultConfig: Required<NTPConfig> = {
 };
 
 export class NTPClient {
-  private config: Required<NTPConfig>;
+  private readonly config: Required<NTPConfig>;
 
   constructor(server?: string, port?: number, timeout?: number);
   constructor(config?: NTPConfig);
