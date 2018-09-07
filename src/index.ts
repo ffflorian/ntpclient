@@ -33,9 +33,7 @@ export class NTPClient {
     }
   }
 
-  /**
-   * Fetches the current NTP Time from the given server and port.
-   */
+  /** Fetches the current NTP Time from the given server and port. */
   public getNetworkTime(ntpReplyTimeout?: number): Promise<Date> {
     if (ntpReplyTimeout) {
       this.config.replyTimeout = ntpReplyTimeout;
