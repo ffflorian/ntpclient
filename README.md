@@ -1,4 +1,4 @@
-# NTPClient [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=ffflorian/ntpclient)](https://dependabot.com)
+# NTPClient [![Build Status](https://api.travis-ci.org/ffflorian/ntpclient.svg?branch=master)](https://travis-ci.org/ffflorian/ntpclient/) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=ffflorian/ntpclient)](https://dependabot.com)
 
 TypeScript implementation of the NTP Client Protocol. Based on [node-ntp-client](https://github.com/moonpyk/node-ntp-client).
 
@@ -31,11 +31,3 @@ new NTPClient('de.pool.ntp.org', 123, 40 * 1000)
   .then(date => console.log(date)) // 2017-09-20T15:29:09.443Z
   .catch(err => console.error(err));
 ```
-
-## Contributors
- * Clément Bourgeois (https://github.com/moonpyk)
- * Callan Bryant (https://github.com/naggie)
-
-## License
-Copyright (c) 2017 Florian Keller,
-licensed under the MIT license.
