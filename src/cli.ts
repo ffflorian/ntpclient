@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 
-//@ts-check
+import { NTPClient } from './';
+import * as program from 'commander';
 
-const { NTPClient } = require('../dist/');
-const program = require('commander');
 const { description, version } = require('../package.json');
 
 program
@@ -15,5 +14,5 @@ program
 
 new NTPClient(program.server, program.port)
   .getNetworkTime()
-  .then(date => console.log(date))
+  .then(date => console.log(date.toString()))
   .catch(err => console.error(err));

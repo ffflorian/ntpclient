@@ -1,7 +1,7 @@
 {
   "author": "Florian Keller <github@floriankeller.de>",
   "bin": {
-    "ntpclient": "bin/ntpclient"
+    "ntpclient": "dist/cli.js"
   },
   "dependencies": {
     "@types/node": "10.9.4",
@@ -16,8 +16,7 @@
     "webpack": "4.17.1"
   },
   "files": [
-    "dist",
-    "bin"
+    "dist"
   ],
   "license": "MIT",
   "main": "dist/index.js",
@@ -25,9 +24,9 @@
   "repository": "https://github.com/ffflorian/ntpclient.git",
   "scripts": {
     "build": "tsc",
-    "clear": "rimraf dist/",
+    "clear": "rimraf dist",
     "dist": "yarn clear && yarn build",
-    "prettier": "prettier --write \"src/**/*.ts\" \"spec/**/*.js\" \"bin/**/*\"",
+    "prettier": "prettier --write \"src/**/*.ts\" \"spec/**/*.js\"",
     "test": "yarn dist && jasmine",
     "version": "yarn dist"
   },
