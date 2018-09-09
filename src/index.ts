@@ -77,10 +77,10 @@ export default class NTPClient {
           return;
         }
 
-        reject(err);
         errorFired = true;
-
         clearTimeout(timeout);
+
+        return reject(err);
       });
 
       client.send(
@@ -95,10 +95,9 @@ export default class NTPClient {
               return;
             }
             clearTimeout(timeout);
-            reject(err);
             errorFired = true;
             client.close();
-            return;
+            return reject(err);
           }
 
           client.once('message', msg => {
@@ -128,7 +127,7 @@ export default class NTPClient {
             const date = new Date('Jan 01 1900 GMT');
             date.setUTCMilliseconds(date.getUTCMilliseconds() + milliseconds);
 
-            resolve(date);
+            return resolve(date);
           });
         }
       );
