@@ -9,9 +9,11 @@
   },
   "description": "TypeScript implementation of the NTP Client Protocol.",
   "devDependencies": {
+    "@types/jasmine": "2.8.8",
     "jasmine": "3.2.0",
     "prettier": "1.14.2",
     "rimraf": "2.6.2",
+    "ts-node": "7.0.1",
     "tslint": "5.11.0",
     "tslint-config-prettier": "1.15.0",
     "tslint-plugin-prettier": "2.0.0",
@@ -30,9 +32,8 @@
     "clear": "rimraf dist",
     "dist": "yarn clear && yarn build",
     "lint": "tslint -p tsconfig.json --fix",
-    "prettier": "prettier --ignore-path .gitignore --write \"**/*.{ts,js}\"",
-    "test": "yarn dist && jasmine",
-    "version": "yarn dist"
+    "prettier": "prettier --ignore-path .gitignore --write \"**/*.ts\"",
+    "test": "ts-node -P tsconfig.jasmine.json node_modules/.bin/jasmine"
   },
   "types": "dist/index.d.ts",
   "version": "0.7.1"
