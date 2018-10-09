@@ -5,7 +5,7 @@
   },
   "dependencies": {
     "@types/node": "10.11.2",
-    "commander": "2.18.0"
+    "commander": "2.19.0"
   },
   "description": "TypeScript implementation of the NTP Client Protocol.",
   "devDependencies": {
