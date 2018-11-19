@@ -9,7 +9,7 @@
   },
   "description": "TypeScript implementation of the NTP Client Protocol.",
   "devDependencies": {
-    "@types/jasmine": "2.8.11",
+    "@types/jasmine": "3.3.0",
     "jasmine": "3.3.0",
     "prettier": "1.15.2",
     "rimraf": "2.6.2",
