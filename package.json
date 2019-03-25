@@ -4,7 +4,7 @@
     "ntpclient": "dist/cli.js"
   },
   "dependencies": {
-    "@types/node": "11.11.5",
+    "@types/node": "11.11.6",
     "commander": "2.19.0"
   },
   "description": "TypeScript implementation of the NTP Client Protocol.",
