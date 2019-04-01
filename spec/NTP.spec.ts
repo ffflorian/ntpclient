@@ -7,7 +7,7 @@ describe('NTP', () => {
     'displays the current time',
     async () => {
       const data = await new NTPClient({
-        replyTimeout
+        replyTimeout,
       }).getNetworkTime();
       expect(data).toEqual(jasmine.any(Date));
     },
@@ -19,7 +19,7 @@ describe('NTP', () => {
     async () => {
       const data = await new NTPClient({
         replyTimeout,
-        server: 'de.pool.ntp.org'
+        server: 'de.pool.ntp.org',
       }).getNetworkTime();
       expect(data).toEqual(jasmine.any(Date));
     },
@@ -30,7 +30,7 @@ describe('NTP', () => {
     try {
       await new NTPClient({
         replyTimeout: 1000,
-        server: 'google.com'
+        server: 'google.com',
       }).getNetworkTime();
       fail();
     } catch (error) {

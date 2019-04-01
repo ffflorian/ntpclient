@@ -3,6 +3,7 @@
 TypeScript implementation of the NTP Client Protocol. Based on [node-ntp-client](https://github.com/moonpyk/node-ntp-client).
 
 ## Usage
+
 Add the module to your project with `yarn add ntpclient`.
 
 ```ts
@@ -18,7 +19,7 @@ new NTPClient()
 new NTPClient({
   server: 'de.pool.ntp.org',
   port: 123,
-  replyTimeout: 40 * 1000 // 40 seconds
+  replyTimeout: 40 * 1000, // 40 seconds
 })
   .getNetworkTime()
   .then(date => console.log(date)) // 2017-09-20T15:29:09.443Z
