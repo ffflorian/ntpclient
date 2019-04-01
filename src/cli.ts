@@ -3,7 +3,7 @@
 import * as program from 'commander';
 import NTPClient from './';
 
-const { description, version } = require('../package.json');
+const {description, version} = require('../package.json');
 
 program
   .version(version)
@@ -14,9 +14,9 @@ program
   .parse(process.argv);
 
 new NTPClient({
-  ...(program.server && { server: program.server }),
-  ...(program.port && { port: program.port }),
-  ...(program.timeout && { replyTimeout: program.timeout })
+  ...(program.server && {server: program.server}),
+  ...(program.port && {port: program.port}),
+  ...(program.timeout && {replyTimeout: program.timeout}),
 })
   .getNetworkTime()
   .then(date => console.log(date.toString()))

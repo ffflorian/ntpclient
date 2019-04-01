@@ -12,7 +12,7 @@ export interface NTPConfig {
 const defaultConfig: Required<NTPConfig> = {
   port: 123,
   replyTimeout: 10 * 1000,
-  server: 'pool.ntp.org'
+  server: 'pool.ntp.org',
 };
 
 export default class NTPClient {
@@ -20,11 +20,7 @@ export default class NTPClient {
 
   constructor(server?: string, port?: number, timeout?: number);
   constructor(config?: NTPConfig);
-  constructor(
-    configOrServer?: string | NTPConfig,
-    port?: number,
-    replyTimeout?: number
-  ) {
+  constructor(configOrServer?: string | NTPConfig, port?: number, replyTimeout?: number) {
     this.config = defaultConfig;
 
     if (typeof configOrServer === 'string') {
@@ -32,7 +28,7 @@ export default class NTPClient {
     } else {
       this.config = {
         ...this.config,
-        ...configOrServer
+        ...configOrServer,
       };
     }
     if (port) {
@@ -83,54 +79,46 @@ export default class NTPClient {
         return reject(err);
       });
 
-      client.send(
-        ntpData,
-        0,
-        ntpData.length,
-        this.config.port,
-        this.config.server,
-        err => {
-          if (err) {
-            if (errorFired) {
-              return;
-            }
-            clearTimeout(timeout);
-            errorFired = true;
-            client.close();
-            return reject(err);
+      client.send(ntpData, 0, ntpData.length, this.config.port, this.config.server, err => {
+        if (err) {
+          if (errorFired) {
+            return;
+          }
+          clearTimeout(timeout);
+          errorFired = true;
+          client.close();
+          return reject(err);
+        }
+
+        client.once('message', msg => {
+          clearTimeout(timeout);
+          client.close();
+
+          // Offset to get to the "Transmit Timestamp" field (time at which the reply
+          // departed the server for the client, in 64-bit timestamp format.
+          const offsetTransmitTime = 40;
+          let intpart = 0;
+          let fractpart = 0;
+
+          // Get the seconds part
+          for (let i = 0; i <= 3; i++) {
+            intpart = 256 * intpart + msg[offsetTransmitTime + i];
           }
 
-          client.once('message', msg => {
-            clearTimeout(timeout);
-            client.close();
+          // Get the seconds fraction
+          for (let i = 4; i <= 7; i++) {
+            fractpart = 256 * fractpart + msg[offsetTransmitTime + i];
+          }
 
-            // Offset to get to the "Transmit Timestamp" field (time at which the reply
-            // departed the server for the client, in 64-bit timestamp format.
-            const offsetTransmitTime = 40;
-            let intpart = 0;
-            let fractpart = 0;
+          const milliseconds = intpart * 1000 + (fractpart * 1000) / 0x100000000;
 
-            // Get the seconds part
-            for (let i = 0; i <= 3; i++) {
-              intpart = 256 * intpart + msg[offsetTransmitTime + i];
-            }
+          // **UTC** time
+          const date = new Date('Jan 01 1900 GMT');
+          date.setUTCMilliseconds(date.getUTCMilliseconds() + milliseconds);
 
-            // Get the seconds fraction
-            for (let i = 4; i <= 7; i++) {
-              fractpart = 256 * fractpart + msg[offsetTransmitTime + i];
-            }
-
-            const milliseconds =
-              intpart * 1000 + (fractpart * 1000) / 0x100000000;
-
-            // **UTC** time
-            const date = new Date('Jan 01 1900 GMT');
-            date.setUTCMilliseconds(date.getUTCMilliseconds() + milliseconds);
-
-            return resolve(date);
-          });
-        }
-      );
+          return resolve(date);
+        });
+      });
     });
   }
 }
