@@ -29,6 +29,11 @@
   "files": [
     "dist"
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "license": "MIT",
   "lint-staged": {
     "*.{json,md}": [
