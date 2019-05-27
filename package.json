@@ -66,6 +66,7 @@
     "lint:ts": "tslint --project tsconfig.json",
     "lint:ts:spec": "tslint --project tsconfig.jasmine.json",
     "prettier": "prettier --ignore-path .gitignore \"*.{json,md}\"",
+    "release": "semantic-release",
     "test": "ts-node -P tsconfig.jasmine.json node_modules/.bin/jasmine"
   },
   "version": "0.7.3"
