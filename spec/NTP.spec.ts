@@ -1,4 +1,4 @@
-import NTPClient from '../src';
+import {NTPClient} from '../src';
 
 const replyTimeout = 10 * 1000;
 

@@ -8,13 +8,13 @@ workflow "Build, lint and test" {
   ]
 }
 
-action "Don't skip CI" {
+action "Skip CI check" {
   uses = "ffflorian/actions/skip-ci-check@v1.0.0"
 }
 
 action "Install dependencies" {
   uses = "ffflorian/actions/git-node@v1.0.0"
-  needs = "Don't skip CI"
+  needs = "Skip CI check"
   runs = "yarn"
 }
 
@@ -55,9 +55,16 @@ action "Don't publish dependency updates" {
   args = "^(?!chore\\(deps)"
 }
 
-action "Publish project" {
+action "Flatten project" {
   uses = "ffflorian/actions/git-node@v1.0.0"
   needs = "Don't publish dependency updates"
+  runs = "yarn"
+  args = "flatten"
+}
+
+action "Publish project" {
+  uses = "ffflorian/actions/git-node@v1.0.0"
+  needs = "Flatten project"
   env = {
     GIT_AUTHOR_NAME = "ffflobot"
     GIT_AUTHOR_EMAIL = "ffflobot@users.noreply.github.com"

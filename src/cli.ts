@@ -1,9 +1,18 @@
 #!/usr/bin/env node
 
 import * as program from 'commander';
-import NTPClient from './';
+import * as fs from 'fs';
+import * as path from 'path';
 
-const {description, version} = require('../package.json');
+import {NTPClient} from './';
+
+const defaultPackageJsonPath = path.join(__dirname, 'package.json');
+const packageJsonPath = fs.existsSync(defaultPackageJsonPath)
+  ? defaultPackageJsonPath
+  : path.join(__dirname, '../package.json');
+
+const packageJson = fs.readFileSync(packageJsonPath, 'utf-8');
+const {description, version}: {description: string; version: string} = JSON.parse(packageJson);
 
 program
   .version(version)
@@ -20,4 +29,7 @@ new NTPClient({
 })
   .getNetworkTime()
   .then(date => console.log(date.toString()))
-  .catch(err => console.error(err));
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
