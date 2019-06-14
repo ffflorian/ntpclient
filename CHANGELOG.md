@@ -1,3 +1,9 @@
+## [1.0.1](https://github.com/ffflorian/ntpclient/compare/v1.0.0...v1.0.1) (2019-06-14)
+
+### Bug Fixes
+
+- Use flattened dir to publish ([e431a72](https://github.com/ffflorian/ntpclient/commit/e431a72))
+
 # [1.0.0](https://github.com/ffflorian/ntpclient/compare/v0.8.0...v1.0.0) (2019-06-13)
 
 ### Features
