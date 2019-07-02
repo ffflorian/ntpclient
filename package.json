@@ -12,7 +12,7 @@
     "@ffflorian/semantic-release-config": "0.1.2",
     "@ffflorian/tslint-config": "0.3.1",
     "@semantic-release/changelog": "3.0.4",
-    "@semantic-release/git": "7.0.15",
+    "@semantic-release/git": "7.0.16",
     "@types/jasmine": "3.3.13",
     "@types/node": "~12",
     "husky": "2.7.0",
