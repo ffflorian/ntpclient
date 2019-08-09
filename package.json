@@ -4,7 +4,7 @@
     "ntpclient": "dist/cli.js"
   },
   "dependencies": {
-    "commander": "2.20.0"
+    "commander": "3.0.0"
   },
   "description": "A TypeScript implementation of the NTP Client Protocol",
   "devDependencies": {
@@ -73,6 +73,7 @@
     "lint:ts:spec": "tslint --project tsconfig.jasmine.json",
     "prettier": "prettier --ignore-path .gitignore \"*.{json,md}\"",
     "release": "semantic-release",
+    "start": "ts-node src/cli.ts",
     "test": "ts-node -P tsconfig.jasmine.json node_modules/.bin/jasmine"
   },
   "version": "1.0.0"
