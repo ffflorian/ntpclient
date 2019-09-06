@@ -1,3 +1,9 @@
+## [1.0.2](https://github.com/ffflorian/ntpclient/compare/v1.0.1...v1.0.2) (2019-09-06)
+
+### Bug Fixes
+
+- Use postversion when publishing ([762781c](https://github.com/ffflorian/ntpclient/commit/762781c))
+
 ## [1.0.1](https://github.com/ffflorian/ntpclient/compare/v1.0.0...v1.0.1) (2019-06-14)
 
 ### Bug Fixes
