@@ -12,9 +12,10 @@ const packageJsonPath = fs.existsSync(defaultPackageJsonPath)
   : path.join(__dirname, '../package.json');
 
 const packageJson = fs.readFileSync(packageJsonPath, 'utf-8');
-const {description, version}: {description: string; version: string} = JSON.parse(packageJson);
+const {bin, description, version}: {description: string; version: string} = JSON.parse(packageJson);
 
 program
+.name(Object.keys(bin)[0])
   .version(version)
   .description(description)
   .option('-s, --server <host>', 'Specify a custom NTP server')
