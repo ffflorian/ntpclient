@@ -1,4 +1,4 @@
-# NTPClient [![Build Status](https://action-badges.now.sh/ffflorian/ntpclient)](https://github.com/ffflorian/ntpclient/actions/) [![npm version](https://img.shields.io/npm/v/ntpclient.svg?style=flat)](https://www.npmjs.com/package/ntpclient) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=ffflorian/ntpclient)](https://dependabot.com)
+# NTPClient [![Build Status](https://github.com/ffflorian/ntpclient/workflows/Build/badge.svg)](https://github.com/ffflorian/ntpclient/actions/) [![npm version](https://img.shields.io/npm/v/ntpclient.svg?style=flat)](https://www.npmjs.com/package/ntpclient) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=ffflorian/ntpclient)](https://dependabot.com)
 
 TypeScript implementation of the NTP Client Protocol. Based on [node-ntp-client](https://github.com/moonpyk/node-ntp-client).
 
