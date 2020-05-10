@@ -1,4 +1,7 @@
+/* eslint-disable no-magic-numbers */
 import * as dgram from 'dgram';
+
+const TEN_SECONDS_IN_MILLIS = 10_000;
 
 export interface NTPConfig {
   /** Remote NTP Server port number */
@@ -11,7 +14,7 @@ export interface NTPConfig {
 
 const defaultConfig: Required<NTPConfig> = {
   port: 123,
-  replyTimeout: 10 * 1000,
+  replyTimeout: TEN_SECONDS_IN_MILLIS,
   server: 'pool.ntp.org',
 };
 
@@ -101,13 +104,13 @@ export class NTPClient {
           let fractpart = 0;
 
           // Get the seconds part
-          for (let i = 0; i <= 3; i++) {
-            intpart = 256 * intpart + msg[offsetTransmitTime + i];
+          for (let index = 0; index <= 3; index++) {
+            intpart = 256 * intpart + msg[offsetTransmitTime + index];
           }
 
           // Get the seconds fraction
-          for (let i = 4; i <= 7; i++) {
-            fractpart = 256 * fractpart + msg[offsetTransmitTime + i];
+          for (let index = 4; index <= 7; index++) {
+            fractpart = 256 * fractpart + msg[offsetTransmitTime + index];
           }
 
           const milliseconds = intpart * 1000 + (fractpart * 1000) / 0x100_000_000;
