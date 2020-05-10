@@ -29,7 +29,7 @@ new NTPClient({
   ...(program.timeout && {replyTimeout: program.timeout}),
 })
   .getNetworkTime()
-  .then(date => console.log(date.toString()))
+  .then(date => console.info(date.toString()))
   .catch(err => {
     console.error(err);
     process.exit(1);

@@ -1,6 +1,8 @@
+/* eslint-disable no-magic-numbers */
 import {NTPClient} from '../src';
 
-const replyTimeout = 10 * 1000;
+const SECOND_IN_MILLIS = 1000;
+const replyTimeout = 10 * SECOND_IN_MILLIS;
 
 describe('NTP', () => {
   it(
@@ -26,10 +28,10 @@ describe('NTP', () => {
     replyTimeout
   );
 
-  it(`doesn't work with an invalid NTP server`, async () => {
+  it("doesn't work with an invalid NTP server", async () => {
     try {
       await new NTPClient({
-        replyTimeout: 1000,
+        replyTimeout: SECOND_IN_MILLIS,
         server: 'google.com',
       }).getNetworkTime();
       fail();
