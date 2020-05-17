@@ -8,7 +8,7 @@
   },
   "description": "A TypeScript implementation of the NTP Client Protocol",
   "devDependencies": {
-    "@ffflorian/eslint-config": "0.4.1",
+    "@ffflorian/eslint-config": "0.5.1",
     "@ffflorian/prettier-config": "0.0.6",
     "@ffflorian/semantic-release-config": "0.2.1",
     "@semantic-release/changelog": "5.0.1",
