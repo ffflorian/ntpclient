@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import * as program from 'commander';
+import * as commander from 'commander';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -14,7 +14,7 @@ const packageJsonPath = fs.existsSync(defaultPackageJsonPath)
 const packageJson = fs.readFileSync(packageJsonPath, 'utf-8');
 const {bin, description, version} = JSON.parse(packageJson);
 
-program
+commander
   .name(Object.keys(bin)[0])
   .version(version)
   .description(description)
@@ -24,9 +24,9 @@ program
   .parse(process.argv);
 
 new NTPClient({
-  ...(program.server && {server: program.server}),
-  ...(program.port && {port: program.port}),
-  ...(program.timeout && {replyTimeout: program.timeout}),
+  ...(commander.server && {server: commander.server}),
+  ...(commander.port && {port: commander.port}),
+  ...(commander.timeout && {replyTimeout: commander.timeout}),
 })
   .getNetworkTime()
   .then(date => console.info(date.toString()))
