@@ -21,7 +21,7 @@ describe('NTP', () => {
     async () => {
       const data = await new NTPClient({
         replyTimeout,
-        server: 'de.pool.ntp.org',
+        server: '0.pool.ntp.org',
       }).getNetworkTime();
       expect(data).toEqual(jasmine.any(Date));
     },
