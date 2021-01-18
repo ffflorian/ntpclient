@@ -23,12 +23,14 @@ commander
   .option('-t, --timeout <number>', 'Specify the timeout in milliseconds')
   .parse(process.argv);
 
+const commanderOptions = commander.opts();
+
 void (async () => {
   try {
     const date = await new NTPClient({
-      ...(commander.server && {server: commander.server}),
-      ...(commander.port && {port: commander.port}),
-      ...(commander.timeout && {replyTimeout: commander.timeout}),
+      ...(commanderOptions.server && {server: commanderOptions.server}),
+      ...(commanderOptions.port && {port: commanderOptions.port}),
+      ...(commanderOptions.timeout && {replyTimeout: commanderOptions.timeout}),
     }).getNetworkTime();
 
     console.info(date.toString());
