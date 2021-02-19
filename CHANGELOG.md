@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/ffflorian/ntpclient/compare/v1.1.0...v1.1.1) (2021-02-19)
+
+
+### Bug Fixes
+
+* Publish deno files to repository ([64c7f3d](https://github.com/ffflorian/ntpclient/commit/64c7f3dbd4b0432b88f1c6d59050a0f843639112))
+
 # [1.1.0](https://github.com/ffflorian/ntpclient/compare/v1.0.2...v1.1.0) (2021-02-19)
 
 
