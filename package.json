@@ -3,6 +3,7 @@
   "bin": {
     "ntpclient": "dist/cli.js"
   },
+  "deno": "edition-deno/src/index.ts",
   "dependencies": {
     "commander": "7.1.0"
   },
@@ -18,6 +19,7 @@
     "@typescript-eslint/eslint-plugin": "4.0.0",
     "@typescript-eslint/parser": "3.10.1",
     "babel-eslint": "10.1.0",
+    "cpx": "1.5.0",
     "eslint": "7.20.0",
     "eslint-config-prettier": "7.2.0",
     "eslint-plugin-import": "2.22.1",
@@ -31,6 +33,7 @@
     "husky": "5.0.9",
     "jasmine": "3.6.4",
     "lint-staged": "10.5.4",
+    "make-deno-edition": "1.2.0",
     "prettier": "2.2.1",
     "publish-flat": "1.4.1",
     "rimraf": "3.0.2",
@@ -38,11 +41,44 @@
     "ts-node": "9.1.1",
     "typescript": "4.1.5"
   },
+  "editions": [
+    {
+      "description": "TypeScript source code with import for modules",
+      "directory": "src",
+      "engines": false,
+      "entry": "src/index.ts",
+      "tags": [
+        "source",
+        "typescript",
+        "import"
+      ]
+    },
+    {
+      "description": "TypeScript source code made to be compatible with Deno",
+      "directory": "edition-deno",
+      "engines": {
+        "browsers": false,
+        "deno": true
+      },
+      "entry": "src/index.ts",
+      "tags": [
+        "typescript",
+        "import",
+        "deno"
+      ]
+    }
+  ],
   "engines": {
     "node": ">= 10.9"
   },
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "deno",
+    "deno-edition",
+    "deno-entry",
+    "denoland"
   ],
   "license": "GPL-3.0",
   "lint-staged": {
@@ -64,13 +100,15 @@
   },
   "repository": "https://github.com/ffflorian/ntpclient.git",
   "scripts": {
-    "build": "tsc",
-    "clear": "rimraf dist",
-    "dist": "yarn clear && yarn build",
-    "flatten": "publish-flat -o flattened",
+    "build:deno": "make-deno-edition",
+    "build:ts": "tsc",
+    "clear": "rimraf dist edition-deno",
+    "copy:source": "cpx \"src/*.ts\" flattened && cpx \"edition-deno/*.ts\" flattened/edition-deno",
+    "dist": "yarn clear && yarn build:ts && yarn build:deno",
     "fix": "yarn fix:other && yarn fix:ts",
     "fix:other": "yarn prettier --write",
     "fix:ts": "yarn lint:ts --fix && yarn lint:ts:spec --fix",
+    "flatten": "publish-flat -o flattened && yarn copy:source",
     "lint": "yarn lint:ts && yarn lint:ts:spec && yarn lint:other",
     "lint:other": "yarn prettier --list-different",
     "lint:ts": "eslint --ignore-path .gitignore --ext .ts src/",
