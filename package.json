@@ -11,7 +11,7 @@
   "devDependencies": {
     "@ffflorian/eslint-config": "0.6.2",
     "@ffflorian/prettier-config": "0.1.2",
-    "@ffflorian/semantic-release-config": "0.4.0",
+    "@ffflorian/semantic-release-config": "0.5.0",
     "@semantic-release/changelog": "5.0.1",
     "@semantic-release/git": "9.0.0",
     "@types/jasmine": "3.6.3",
@@ -103,7 +103,7 @@
     "build:deno": "make-deno-edition",
     "build:ts": "tsc",
     "clear": "rimraf dist edition-deno",
-    "copy:source": "cpx \"src/*.ts\" flattened && cpx \"edition-deno/*.ts\" flattened/edition-deno",
+    "copy:source": "cpx \"src/*.ts\" flattened",
     "dist": "yarn clear && yarn build:ts && yarn build:deno",
     "fix": "yarn fix:other && yarn fix:ts",
     "fix:other": "yarn prettier --write",
