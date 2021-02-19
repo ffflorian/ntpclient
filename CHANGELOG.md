@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/ffflorian/ntpclient/compare/v1.0.2...v1.1.0) (2021-02-19)
+
+
+### Features
+
+* Deno edition ([#572](https://github.com/ffflorian/ntpclient/issues/572)) ([ab0b63f](https://github.com/ffflorian/ntpclient/commit/ab0b63fb51d1b986846ea92d99ad8053e1ec5bee))
+
 ## [1.0.2](https://github.com/ffflorian/ntpclient/compare/v1.0.1...v1.0.2) (2019-09-06)
 
 ### Bug Fixes

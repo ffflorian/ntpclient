@@ -56,16 +56,16 @@
     {
       "description": "TypeScript source code made to be compatible with Deno",
       "directory": "edition-deno",
-      "engines": {
-        "browsers": false,
-        "deno": true
-      },
       "entry": "src/index.ts",
       "tags": [
         "typescript",
         "import",
         "deno"
-      ]
+      ],
+      "engines": {
+        "deno": true,
+        "browsers": false
+      }
     }
   ],
   "engines": {
@@ -119,5 +119,5 @@
     "start": "ts-node src/cli.ts",
     "test": "ts-node -P tsconfig.jasmine.json node_modules/.bin/jasmine"
   },
-  "version": "1.0.2"
+  "version": "1.1.0"
 }
