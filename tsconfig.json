@@ -18,5 +18,5 @@
     "strictFunctionTypes": true,
     "target": "es6"
   },
-  "exclude": ["dist", "node_modules", "spec"]
+  "exclude": ["dist", "node_modules", "spec", "edition-deno"]
 }
