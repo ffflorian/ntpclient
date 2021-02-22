@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/ffflorian/ntpclient/compare/v1.1.1...v1.1.2) (2021-02-22)
+
+
+### Bug Fixes
+
+* Publish source files ([044e842](https://github.com/ffflorian/ntpclient/commit/044e842bfee6f235ecdb7899f37f450a1998180c))
+
 ## [1.1.1](https://github.com/ffflorian/ntpclient/compare/v1.1.0...v1.1.1) (2021-02-19)
 
 
