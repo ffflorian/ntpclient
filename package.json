@@ -39,7 +39,7 @@
     "publish-flat": "1.4.1",
     "rimraf": "3.0.2",
     "semantic-release": "17.4.3",
-    "ts-node": "9.1.1",
+    "ts-node": "10.0.0",
     "typescript": "4.2.4"
   },
   "editions": [
