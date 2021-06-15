@@ -980,10 +980,10 @@ atob@^2.1.2:
   resolved "https://registry.npmjs.org/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-await-spawn@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.npmjs.org/await-spawn/-/await-spawn-4.0.1.tgz#71bb2433bc5be52b9bfd0154435d5e063e0ba4a5"
-  integrity sha512-cQSpdH79ktTdsMjUuUvyhdIYbXArynlV5jvHY8FPWXdwF5UGyrVaHCQxo/Iw5DbSQx2Ha3EOS+cy41sup+AkiQ==
+await-spawn@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.npmjs.org/await-spawn/-/await-spawn-4.0.2.tgz#d9de3c98bf5324a4d0599cb505f3185b89ed7875"
+  integrity sha512-GdADmeLJiMvGKJD3xWBcX40DMn07JNH1sqJYgYJZH7NTGJ3B1qDjKBKzxhhyR1hjIcnUGFUmE/+4D1HcHAJBAA==
   dependencies:
     bl "^4.0.3"
 
@@ -1854,10 +1854,10 @@ err-code@^2.0.2:
   resolved "https://registry.npmjs.org/err-code/-/err-code-2.0.3.tgz#23c2f3b756ffdfc608d30e27c9a941024807e7f9"
   integrity sha512-2bmlRpNKBxT/CRmPOlyISQpNj+qSeYvcym/uT0Jx2bMOlKLtSy1ZmLuVxSEKKyor/N5yhvp/ZiG1oE3DEYMSFA==
 
-errlop@^4.0.0:
-  version "4.1.0"
-  resolved "https://registry.npmjs.org/errlop/-/errlop-4.1.0.tgz#8e7b8f4f1bf0a6feafce4d14f0c0cf4bf5ef036b"
-  integrity sha512-vul6gGBuVt0M2TPi1/WrcL86+Hb3Q2Tpu3TME3sbVhZrYf7J1ZMHCodI25RQKCVurh56qTfvgM0p3w5cT4reSQ==
+errlop@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.npmjs.org/errlop/-/errlop-4.2.0.tgz#32dafd22f55800feb4204c4493abb366e5e25cef"
+  integrity sha512-oF4tJVrFEs3NnBwi5HuxWhBp6ubwNf+vPG4MhngBPnK93BpJqPuMnfBBAyByis4IznnEq11oceCVoOCZFwjqWg==
 
 error-ex@^1.3.1:
   version "1.3.2"
@@ -2303,10 +2303,10 @@ fastq@^1.6.0:
   dependencies:
     reusify "^1.0.0"
 
-fdir@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.npmjs.org/fdir/-/fdir-4.1.0.tgz#f739ec79f61f69779a6430a622e5f54c57caf921"
-  integrity sha512-oOkohnPg4nUIkd6w22iGbFD7c7UvVnXB3a7/GHcPSsXDUGm6Jxp12bGI5O0gr0YuhDh5l/vDExdHOnrW/j9EqQ==
+fdir@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.npmjs.org/fdir/-/fdir-5.1.0.tgz#973e4934e6a3666b59ebdfc56f60bb8e9b16acb8"
+  integrity sha512-IgTtZwL52tx2wqWeuGDzXYTnNsEjNLahZpJw30hCQDyVnoHXwY5acNDnjGImTTL1R0z1PCyLw20VAbE5qLic3Q==
 
 figures@^2.0.0:
   version "2.0.0"
@@ -2524,12 +2524,12 @@ get-caller-file@^2.0.5:
   resolved "https://registry.npmjs.org/get-caller-file/-/get-caller-file-2.0.5.tgz#4f94412a82db32f36e3b0b9741f8a97feb031f7e"
   integrity sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==
 
-get-cli-arg@^6.7.0:
-  version "6.8.0"
-  resolved "https://registry.npmjs.org/get-cli-arg/-/get-cli-arg-6.8.0.tgz#96896366217ee2c97fa18401463671bfbfb4b187"
-  integrity sha512-ydZMbzEaS36OCsTfrTrkG8Bp0T772Riirr99HEAU9oBKSy1Fi9/WmtQYFTgjY9/1d/1apAJeA5FN6chtVUG5TQ==
+get-cli-arg@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.npmjs.org/get-cli-arg/-/get-cli-arg-7.0.0.tgz#58df8e47986dd3d38db794cfcf72bc6895e3873d"
+  integrity sha512-OwZC0l44ETs6G/DebRUtCzGeJwV8BBqTIsA14eihRH4lOBFYY6maWK47/Qex68G9KVK0OzIyVb8EU0bM247Jrw==
   dependencies:
-    normalify "^2.20.0"
+    normalify "^2.21.0"
 
 get-intrinsic@^1.0.2, get-intrinsic@^1.1.1:
   version "1.1.1"
@@ -3841,17 +3841,17 @@ macos-release@^2.2.0:
   resolved "https://registry.npmjs.org/macos-release/-/macos-release-2.3.0.tgz#eb1930b036c0800adebccd5f17bc4c12de8bb71f"
   integrity sha512-OHhSbtcviqMPt7yfw5ef5aghS2jzFVKEFyCJndQt2YpSQ9qRVSEv2axSJI1paVThEu+FFGs584h/1YhxjVqajA==
 
-make-deno-edition@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.npmjs.org/make-deno-edition/-/make-deno-edition-1.2.0.tgz#ef04eb50109ade76fa1b5c5553b3efe56620144a"
-  integrity sha512-s9qLP0FCXDcqEMczkXNV0fzI7PyKFdgxaIb7jtOTwCkGU8YGjFJnO0W27RFNkCwobbw+AI8TbSGMmC9Jt+r/1Q==
+make-deno-edition@1.3.0:
+  version "1.3.0"
+  resolved "https://registry.npmjs.org/make-deno-edition/-/make-deno-edition-1.3.0.tgz#8c3030134c3e152609a150919df9725fde2b1f44"
+  integrity sha512-C5JoDkykIJMjPf3wVwgzM1ex680rNwhGYF3gMlgoeXAWPAyEPof6W7/HaZvLLNaR3/BRzNElsfbd7ZEIkJOJXA==
   dependencies:
     "@types/rimraf" "^3.0.0"
-    await-spawn "^4.0.1"
-    chalk "^4.1.0"
-    errlop "^4.0.0"
-    fdir "^4.1.0"
-    get-cli-arg "^6.7.0"
+    await-spawn "^4.0.2"
+    chalk "^4.1.1"
+    errlop "^4.2.0"
+    fdir "^5.1.0"
+    get-cli-arg "^7.0.0"
     mkdirp "^1.0.4"
     rimraf "^3.0.2"
 
@@ -4244,7 +4244,7 @@ nopt@^5.0.0:
   dependencies:
     abbrev "1"
 
-normalify@^2.20.0:
+normalify@^2.21.0:
   version "2.21.0"
   resolved "https://registry.npmjs.org/normalify/-/normalify-2.21.0.tgz#a2b19ab4baf6715b0c6d6240df2d81c6cd955558"
   integrity sha512-zPKUQOQW3Qe95iR7ldD7z0JEil/h5hBjs4m+x12xRYym+TerHRp+zpVSSvlbO2MlRrrCPyI4RevTK1N4/CT0EQ==
