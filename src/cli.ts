@@ -1,4 +1,4 @@
-import * as commander from 'commander';
+import {program as commander} from 'commander';
 import * as fs from 'fs';
 import * as path from 'path';
 
