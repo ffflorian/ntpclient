@@ -1,4 +1,6 @@
-import * as commander from 'commander';
+#!/usr/bin/env node
+
+import {program as commander} from 'commander';
 import * as fs from 'fs';
 import * as path from 'path';
 
