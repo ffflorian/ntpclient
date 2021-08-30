@@ -36,7 +36,7 @@ describe('NTP', () => {
       }).getNetworkTime();
       fail();
     } catch (error) {
-      expect(error.message).toContain('Timeout');
+      expect((error as Error).message).toContain('Timeout');
     }
   });
 });
