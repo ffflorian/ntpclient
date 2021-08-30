@@ -3,7 +3,6 @@
   "bin": {
     "ntpclient": "dist/cli.js"
   },
-  "deno": "edition-deno/src/index.ts",
   "dependencies": {
     "commander": "8.1.0"
   },
@@ -34,7 +33,6 @@
     "husky": "4.3.8",
     "jasmine": "3.9.0",
     "lint-staged": "11.1.2",
-    "make-deno-edition": "1.2.0",
     "prettier": "2.3.2",
     "publish-flat": "1.4.1",
     "rimraf": "3.0.2",
@@ -42,45 +40,12 @@
     "ts-node": "10.2.1",
     "typescript": "4.3.5"
   },
-  "editions": [
-    {
-      "description": "TypeScript source code with import for modules",
-      "directory": "src",
-      "engines": false,
-      "entry": "src/index.ts",
-      "tags": [
-        "source",
-        "typescript",
-        "import"
-      ]
-    },
-    {
-      "description": "TypeScript source code made to be compatible with Deno",
-      "directory": "edition-deno",
-      "entry": "src/index.ts",
-      "tags": [
-        "typescript",
-        "import",
-        "deno"
-      ],
-      "engines": {
-        "deno": true,
-        "browsers": false
-      }
-    }
-  ],
   "engines": {
     "node": ">= 10.9"
   },
   "files": [
     "dist",
     "src"
-  ],
-  "keywords": [
-    "deno",
-    "deno-edition",
-    "deno-entry",
-    "denoland"
   ],
   "license": "GPL-3.0",
   "lint-staged": {
@@ -102,11 +67,10 @@
   },
   "repository": "https://github.com/ffflorian/ntpclient.git",
   "scripts": {
-    "build:deno": "make-deno-edition",
     "build:ts": "tsc",
-    "clear": "rimraf dist edition-deno",
+    "clear": "rimraf dist",
     "copy:source": "cpx \"src/*.ts\" flattened",
-    "dist": "yarn clear && yarn build:ts && yarn build:deno",
+    "dist": "yarn clear && yarn build:ts",
     "fix": "yarn fix:other && yarn fix:ts",
     "fix:other": "yarn prettier --write",
     "fix:ts": "yarn lint:ts --fix && yarn lint:ts:spec --fix",
