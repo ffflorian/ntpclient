@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/ffflorian/ntpclient/compare/v1.1.2...v1.1.3) (2022-12-05)
+
+
+### Bug Fixes
+
+* Publish updated depdendencies ([a347e70](https://github.com/ffflorian/ntpclient/commit/a347e70ad0d699d402ef4e4cf426b8844901af2e))
+
 ## [1.1.2](https://github.com/ffflorian/ntpclient/compare/v1.1.1...v1.1.2) (2021-02-22)
 
 
